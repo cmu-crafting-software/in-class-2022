@@ -17,9 +17,20 @@ def averageAge():
 
 averageAge()
 
-#def stateSort():
-#    pres = open("presidents.json")
-#    presidents = json.load(pres)
-#    for president in presidents:
-#        stateBirth = president['']
+def stateSort():
+    pres = open("presidents.json")
+    presidents = json.load(pres)
+    states = []
+    names = []
+    for president in presidents:
+        stateBirth = president['SOB']
+        states.append(stateBirth)
+        presName = president['First'] + " " + president["Last"]
+        names.append(presName)
+    
+    presDict = {states[i]:names[i] for i in range(len(names))}
 
+    for i in sorted (presDict):
+        print ((i, presDict[i]), end = " ")
+
+stateSort()
