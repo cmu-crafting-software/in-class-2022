@@ -1,18 +1,21 @@
 import json 
 from datetime import datetime
 
-def printAge():
+def printAvgAge():
     f = open("presidents.json")
     presidents = json.load(f)
 
     age = []
     for president in presidents :
         dob = datetime.strptime(president['DOB'], '%Y-%m-%d')
-        print(dob.year)
-        age = dob.year - 2022
-        print(age)
+        # print(dob.year)
+        age.append(2022 - dob.year)
+        # print(age)
+        
+    avgAge = sum(age)/len(age)
+    print(avgAge)
 
-printAge()
+printAvgAge()
 
 # def printPresidentName():
 #     f = open("presidents.json")
