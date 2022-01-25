@@ -1,0 +1,17 @@
+[
+    {
+      "First": "Joe",
+      "Last": "Biden",
+      "DOB": "1942-11-20"
+    },
+    {
+      "First": "Donald",
+      "Last": "Trump",
+      "DOB": "1946-05-14"
+    },
+    {
+      "First": "Barack",
+      "Last": "Obama",
+      "DOB": "1961-08-04"
+    }
+]
