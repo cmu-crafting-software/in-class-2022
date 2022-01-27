@@ -14,3 +14,4 @@ def birth_state():
         prezs.append(prez)
     print(prezs)
 print(birth_state())
+#test
