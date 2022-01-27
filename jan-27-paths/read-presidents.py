@@ -30,8 +30,5 @@ presidents[4]['Birth State'] = 'Arkansas'
 presidents[5]['Birth State'] = 'Georgia'
 presidents[6]['Birth State'] = 'Virginia'
 
-f = open("updatedPresidents.json",'w')
-json.dump(presidents,f)
-
 sortedPresidents = sorted(presidents, key = lambda prez : prez['Birth State'])
 print(sortedPresidents)
