@@ -21,12 +21,13 @@ state = []
 def sortByState():
     f = open('presidents.json')
     presidents = json.load(f)
-
     
     for president in presidents :
         birthPlace = (president['State'])
         #print birthPlace
         state.append(birthPlace)
+        state.sort()
+    state = [str(state)]
     print state
         
 
