@@ -1,11 +1,9 @@
-#!/usr/bin/env python3
-
 import json
 from datetime import datetime
+import glob
 
 
-
-def step3():
+def getAvgAge():
     f = open("presidents.json")
     presidents = json.load(f)
 
@@ -19,8 +17,21 @@ def step3():
         ages.append(age)
     return ages
 
+def part4():
+    f = open("presidents.json")
+    presidents = json.load(f)
 
+    states = []
+    for president in presidents :
+        State = president['State']
+        states.append(State)
 
+    states.sort()
+    for president in presidents:
 
+        
+def part5():
+    files = glob.glob('**/*.csv', recursive=True)
+    print(files)
 
-print(step3())
+part5()
