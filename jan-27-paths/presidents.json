@@ -2,12 +2,14 @@
   {
     "First": "Joe",
     "Last": "Biden",
-    "DOB": "1942-11-20"
+    "DOB": "1942-11-20",
+    "BirthState": "PA"
   },
   {
     "First": "Donald",
     "Last": "Trump",
-    "DOB": "1946-05-14"
+    "DOB": "1946-05-14",
+    "BirthState": "NY"
   },
   {
     "First": "Barack",
@@ -18,6 +20,13 @@
   {
     "First": "George",
     "Last": "Bush",
-    "DOB": "1946-07-06"
+    "DOB": "1946-07-06",
+    "BirthState": "CT"
+  },
+  {
+    "First": "Bill",
+    "Last": "Clinton",
+    "DOB":"1946-08-19",
+    "BirthState": "AK"
   }
 ]
