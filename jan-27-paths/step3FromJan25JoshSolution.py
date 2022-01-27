@@ -4,7 +4,6 @@ import json
 from datetime import datetime
 
 
-
 def step3():
     f = open("presidents.json")
     presidents = json.load(f)
