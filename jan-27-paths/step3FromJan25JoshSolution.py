@@ -10,6 +10,7 @@ def step3():
     presidents = json.load(f)
 
     ages = []
+    agesum = 0
     for president in presidents :
         dob = datetime.strptime(president['DOB'], '%Y-%m-%d')
         today = datetime.today()
@@ -17,7 +18,8 @@ def step3():
         if (today.month, today.day) <  (dob.month, dob.day) :
             age = age - 1
         ages.append(age)
-    return ages
+        agesum = agesum + age
+    return agesum/len(ages)
 
 
 

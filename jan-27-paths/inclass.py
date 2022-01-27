@@ -3,11 +3,12 @@ from datetime import datetime
 import glob
 
 
-def getAvgAge():
+def step3():
     f = open("presidents.json")
     presidents = json.load(f)
 
     ages = []
+    agesum = 0
     for president in presidents :
         dob = datetime.strptime(president['DOB'], '%Y-%m-%d')
         today = datetime.today()
@@ -15,7 +16,8 @@ def getAvgAge():
         if (today.month, today.day) <  (dob.month, dob.day) :
             age = age - 1
         ages.append(age)
-    return ages
+        agesum = agesum + age
+    return agesum/len(ages)
 
 def part4():
     f = open("presidents.json")
@@ -27,11 +29,10 @@ def part4():
         states.append(State)
 
     states.sort()
-    for president in presidents:
+    pres = []
+    for state in states:
+        for president in presidents :
+            if president.get('State') == state:
+                print(president['First'], president['Last'])
 
-        
-def part5():
-    files = glob.glob('**/*.csv', recursive=True)
-    print(files)
-
-part5()
+part4()
