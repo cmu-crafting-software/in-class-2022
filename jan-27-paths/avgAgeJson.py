@@ -24,7 +24,9 @@ def step6():
                 age = age - 1
             ages.append(age)
     print(ages)
-    return ages
+    avgAge = sum(ages)/len(ages)
+    print(avgAge)
+    return avgAge
 
 
 step6()
