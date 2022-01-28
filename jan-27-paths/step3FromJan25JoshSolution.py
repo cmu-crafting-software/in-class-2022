@@ -20,3 +20,7 @@ def step3():
     return ages
 
 print(step3())
+
+import glob
+files = glob.glob('**/*.json', recursive=False)
+print(files)
