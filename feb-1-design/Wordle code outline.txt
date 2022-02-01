@@ -1,0 +1,12 @@
+#Christine, Morgan
+
+#make a dictionary of words
+    #manually input words at first
+#get input from user
+#how to store the input words from user
+#how to compare the input with the Word 
+#show feedback
+#save correct letters in correct positions
+#get input from user
+#repeat
+
