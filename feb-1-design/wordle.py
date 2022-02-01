@@ -1,19 +1,18 @@
-#initialize directory
+#Darren and Jack Wordle Code
 
-#initialize game state
 
-#select target word
+#Build Dictionary
 
-#get user input
+#Build GUI
 
-#validate user input
+#Generate Random Word
 
-#compare user input to target word
+#Get User Input
 
-#give user feedback
+#Check User Input against randomly generated word
 
-#update game state
+#Check word against dictionary
 
-#end game (win)
+#Provide feedback to User 
 
-#end game (lose)
+#loop for 6 tries or until successful guess
