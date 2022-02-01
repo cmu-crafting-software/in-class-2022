@@ -48,3 +48,5 @@ def step7():
 
 
 step7()
+
+# need to remove duplicates
