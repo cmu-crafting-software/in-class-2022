@@ -64,10 +64,12 @@ def test_vgl_pizza() :
     assert valid_guess_length('pizza')
 def test_vgl_pizz() :
     assert not(valid_guess_length('pizz'))
+def test_vgl_pizzaz() :
+    assert not(valid_guess_length('pizzaz'))
 
 def test_gid_pizza() :
     assert guess_in_dict('pizza', {'pizza'})
-def test_vgl_pizz() :
+def test_gid_pizz() :
     assert not(guess_in_dict('pizz', {'pizza'}))
 
 #TODO write at least one test for `pick_word`
