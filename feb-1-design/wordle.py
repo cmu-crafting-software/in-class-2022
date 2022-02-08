@@ -22,20 +22,27 @@ guess = "check"
 def compare(sword, gword):
     sword = sword.lower()
     gword = gword.lower()
-    result = []
+    result = ""
 
-    if sword == gword: print("Congrats! You won Wordle!")
+    if sword == gword: return("*****")
 
-    for i in range(0,4,1):
-        for j in range(0,4,1):
-            if gword[i] == secret[j] and i == j: result.append("*")
+    #check if char in right place
 
+    for i in range(0,5,1):
+        
+        if gword[i] == sword[i]: result += "*" 
+        elif gword[i] in sword: result += "^"
+        else: result += "_"
 
+    return result
     
     
     print("_ = totally incorrect, * = right letter in right place; ^ right letter, wrong position")
     return 
 
+
+print(compare(secret, guess))
+print(compare("pizza", "piano"))
 #Notify user of outcome and provide feedback
 #Loop from comparator until user either guesses word or runs out of guesses
 
