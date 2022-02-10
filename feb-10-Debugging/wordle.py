@@ -149,15 +149,16 @@ def pick_word(dict) :
     
     random_word = random.choice(list(dict.keys()))
     try: 
-        random_word = random.choice(list(dict.keys()))
-        assert (len(random_word == 5))
+        while(len(random_word)) != SIZE:
+            random_word = random.choice(list(dict.keys()))
+        assert (len(random_word) == 5)
     except:
          print("wrong Length word")
     return random_word
 
 
 def load_words():
-    with open('/Users/michaelhilton/Development/Teaching/in-class-2022/feb-10-Debugging/words.json') as json_file:
+    with open('/Users/ctroller/in-class-2022/feb-10-Debugging/words.json') as json_file:
         words = json.load(json_file)
     return words
  
