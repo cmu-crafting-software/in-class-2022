@@ -72,7 +72,7 @@ def test_vgl_fishy() :
 
 def test_gid_pizza() :
     assert guess_in_dict('pizza', {'pizza'})
-def test_vgl_pizz() :
+def test_gid_pizz() :
     assert not(guess_in_dict('pizz', {'pizza'}))
     
 def test_gid_EMPTY() :
