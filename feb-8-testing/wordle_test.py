@@ -67,7 +67,7 @@ def test_vgl_pizz() :
 def test_vgl_pizzaz() :
     assert not(valid_guess_length('pizzaz'))
 def test_vgl_dict() :
-    assert not(valid_guess_length({'dict'}))
+    assert not(valid_guess_length({'dicts'}))
 
 def test_gid_pizza() :
     assert guess_in_dict('pizza', {'pizza'})
@@ -79,7 +79,11 @@ def test_gid_integer() :
     assert not(guess_in_dict('pizza', {5}))
 def test_gid_CAPS() :
     assert not(guess_in_dict('pizza', {'PIZZA'}))
-def test_gid_LOWERCASE() :
-    assert not(guess_in_dict('PIZZA', {'pizza'}))
 
 #TODO write at least one test for `pick_word`
+def test_pickword_in() :
+    dict = {'RADIO'}
+    assert pick_word(dict) in dict
+def test_pickword_not_in() :
+    dict = {'PIZZA'}
+    assert not(pick_word(dict) in dict)

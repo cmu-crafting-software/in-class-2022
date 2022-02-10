@@ -145,11 +145,11 @@ def process_guess(guess_word, answer_word, dict) :
 # are the last date the word was picked.
 # Output: The answer word
 # The dictionary will be modified such that the answer picked will have today's date as a value
+wordle_dict = {'pizza', 'cower', 'trees'}
+
 def pick_word(dict) :
     #TODO: pick a random word from the dictionary
-    word = random.choice(dict)
     #Hint: use the random python module. See: https://docs.python.org/3/library/random.html
     #TODO: stretch goal pick a random word that has not been used in DAYS_UNTIL_ANSWER_REUSED days
-    
     #TODO: replace the line below
     return 'RADIO'
