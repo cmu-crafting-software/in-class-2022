@@ -113,19 +113,13 @@ def check_guess(guess_word, answer_word) :
 # * returns true if `guess_word` is SIZE characters long
 # * returns false otherwise
 def valid_guess_length(guess_word) :
-    if len(guess_word)==SIZE :
-        return True
-    else :
-        return False
+    return len(guess_word)==SIZE
 
 # Output:
 # * returns true if `guess_word` is in `dict`
 # * returns false otherwise
 def guess_in_dict(guess_word, dict) :
-    if guess_word in dict :
-        return True
-    else:
-        return False
+    return guess_word in dict
 
 # Input: the guess word, the answer word, and a dictionary of all possible guesses
 #   assumes the answer word is in the dictionary
@@ -140,9 +134,9 @@ def process_guess(guess_word, answer_word, dict) :
         return INVALID_GUESS
     return check_guess(guess_word, answer_word)
 
-# Input: A dictionary where keys are valid wordle words and values are 
+# Input: A dictionary where keys are valid wordle words and values are
 # are the last date the word was picked.
-# Output: The answer word
+# Output: The answer word, which has not been used in DAYS_UNTIL_ANSWER_REUSED days
 # The dictionary will be modified such that the answer picked will have today's date as a value
 def pick_word(dict, random_number) :
     #TODO: pick a random word from the dictionary
