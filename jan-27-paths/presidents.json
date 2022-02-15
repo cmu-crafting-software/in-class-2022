@@ -2,22 +2,32 @@
   {
     "First": "Joe",
     "Last": "Biden",
-    "DOB": "1942-11-20"
+    "DOB": "1942-11-20",
+    "State": "Pennsilvania"
   },
   {
     "First": "Donald",
     "Last": "Trump",
-    "DOB": "1946-05-14"
+    "DOB": "1946-05-14",
+    "State": "New York"
   },
   {
     "First": "Barack",
     "Last": "Obama",
     "DOB": "1961-08-04",
-    "BirthState": "Hawaii"
+    "State": "Hawaii"
   },
   {
     "First": "George",
     "Last": "Bush",
-    "DOB": "1946-07-06"
+    "DOB": "1946-07-06",
+    "State": "Connecticut"
+  },
+
+  {
+    "First": "Leslie",
+    "Last": "Knope",
+    "DOB": "1975-01-18",
+    "State": "Indiana"
   }
 ]

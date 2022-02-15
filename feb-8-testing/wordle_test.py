@@ -1,6 +1,8 @@
 from wordle import guess_in_dict, unique, hint_repeated_char, positions, \
     check_guess, valid_guess_length, pick_word
 
+from datetime import date
+
 def test_hint_repeated_char() :
     assert hint_repeated_char([0,1], [0,1], ['_', '_']) == ['*', '*']
 
@@ -64,10 +66,37 @@ def test_vgl_pizza() :
     assert valid_guess_length('pizza')
 def test_vgl_pizz() :
     assert not(valid_guess_length('pizz'))
+def test_vgl_empty() :
+    assert not(valid_guess_length(''))
+# def test_vgl_spaces() :
+#     assert not(valid_guess_length('     '))
 
 def test_gid_pizza() :
     assert guess_in_dict('pizza', {'pizza'})
 def test_gid_pizz() :
     assert not(guess_in_dict('pizz', {'pizza'}))
-
+def test_gid_empty() :
+    assert not(guess_in_dict('', {'pizza'}))
+def test_gid_spaces() :
+    assert not(guess_in_dict('     ', {'pizza'}))
+def test_gid_empty_dict() :
+    assert not(guess_in_dict('pizza', {}))
+# def test_gid_capital() :
+    # assert (guess_in_dict('PIZZA', {'pizza'}))
+def test_gid_string_dict() :
+    assert (guess_in_dict('pizza', 'pizza'))
 #TODO write at least one test for `pick_word`
+
+def test_pickword_in():
+    dict = {'pizza', 'apple'}
+    assert pick_word(dict) in dict
+
+def test_pickword_date():
+    dict = {'pizza'}
+    answer_word = pickword(dict)
+    assert dict[answer_word] == date.today()
+
+def test_pickwordnot_recent():
+    old_date = '2020-01-01' #TODO: check if this is right
+    dict = {'pizza' : old_date, 'apple' : date.today()}
+    assert pick_word(dict) == 'pizza'

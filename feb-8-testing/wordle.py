@@ -138,10 +138,13 @@ def process_guess(guess_word, answer_word, dict) :
 # are the last date the word was picked.
 # Output: The answer word, which has not been used in DAYS_UNTIL_ANSWER_REUSED days
 # The dictionary will be modified such that the answer picked will have today's date as a value
-def pick_word(dict) :
+def pick_word(dict, random_number) :
     #TODO: pick a random word from the dictionary
     #Hint: use the random python module. See: https://docs.python.org/3/library/random.html
     #TODO: stretch goal pick a random word that has not been used in DAYS_UNTIL_ANSWER_REUSED days
     
     #TODO: replace the line below
     return 'RADIO'
+
+
+#COMMAND SHIFT P is your friend

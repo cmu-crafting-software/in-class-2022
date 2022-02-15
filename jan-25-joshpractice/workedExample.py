@@ -17,7 +17,7 @@ def printCSV():
         amendments = csv.reader(csvfile, delimiter=',', quotechar='|')
 
         #skip header row
-        next(amendments)
+        next(amendments);
 
         for amendment in amendments :
             print(datetime.strptime(amendment[2], '%m/%d/%Y').year)
@@ -29,8 +29,8 @@ def printCSVDict():
         for amendment in amendments :
             print(datetime.strptime(amendment['Proposed'], '%m/%d/%Y').year)
 
-#printYears()
+printYears()
 
 printCSV()
 
-#printCSVDict()
+printCSVDict()

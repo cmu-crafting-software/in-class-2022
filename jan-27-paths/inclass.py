@@ -1,8 +1,6 @@
-#!/usr/bin/env python3
-
 import json
 from datetime import datetime
-
+import glob
 
 
 def step3():
@@ -21,8 +19,20 @@ def step3():
         agesum = agesum + age
     return agesum/len(ages)
 
+def part4():
+    f = open("presidents.json")
+    presidents = json.load(f)
 
+    states = []
+    for president in presidents :
+        State = president['State']
+        states.append(State)
 
+    states.sort()
+    pres = []
+    for state in states:
+        for president in presidents :
+            if president.get('State') == state:
+                print(president['First'], president['Last'])
 
-
-print(step3())
+part4()
