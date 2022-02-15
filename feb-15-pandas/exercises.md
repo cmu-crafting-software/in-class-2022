@@ -3,6 +3,9 @@
 
 
 1. Write an expression to find the Per Capita GDP of Serbia in 2007.
+df=pd.read_csv('data/gapminder_all.csv')
+serbia_df=df[df['country']=='Serbia']
+print(serbia_df['gdpPercap_2007'])
 
 2. Explain what each line in the following short program does: 
 ```python
