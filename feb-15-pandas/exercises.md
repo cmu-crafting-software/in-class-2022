@@ -9,11 +9,11 @@ print(serbia_df['gdpPercap_2007'])
 
 2. Explain what each line in the following short program does: 
 ```python
-first = pd.read_csv('data/gapminder_all.csv', index_col='country')
-second = first[first['continent'] == 'Americas']
-third = second.drop('Puerto Rico')
-fourth = third.drop('continent', axis = 1)
-fourth.to_csv('result.csv')
+first = pd.read_csv('data/gapminder_all.csv', index_col='country') #creates a dataframe that is indexed alphabetically by country
+second = first[first['continent'] == 'Americas'] #creates a second data frame that only includes countries in the continent of America
+third = second.drop('Puerto Rico') #removes puerto rico from the previous data frame and saves as a new dataframe
+fourth = third.drop('continent', axis = 1) #removes the continent column 
+fourth.to_csv('result.csv') #saves result to csv
 ```
 3. 
 a) Do the second and third lines below produce the same output? 
