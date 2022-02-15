@@ -1,5 +1,6 @@
 from wordle import guess_in_dict, unique, hint_repeated_char, positions, \
-    check_guess, valid_guess_length, pick_word
+    check_guess, valid_guess_length, pick_word, process_guess
+INVALID_GUESS = "Your guess is invalid."
 
 def test_hint_repeated_char() :
     assert hint_repeated_char([0,1], [0,1], ['_', '_']) == ['*', '*']
@@ -69,5 +70,9 @@ def test_gid_pizza() :
     assert guess_in_dict('pizza', {'pizza'})
 def test_gid_pizz() :
     assert not(guess_in_dict('pizz', {'pizza'}))
+
+
+def test_process_guess() :
+    assert not (process_guess("pizza", "legoo", {'pizza':1, 'legoo': 2}) == INVALID_GUESS)
 
 #TODO write at least one test for `pick_word`

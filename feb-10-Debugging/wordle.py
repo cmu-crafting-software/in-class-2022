@@ -130,7 +130,7 @@ def guess_in_dict(guess_word, dict) :
 # either because it is longer than SIZE or not in `dict` then the 
 # output is the INVALID_GUESS string. 
 def process_guess(guess_word, answer_word, dict) :
-    if valid_guess_length(guess_word) :
+    if  not valid_guess_length(guess_word) :
         return INVALID_GUESS
     elif not(guess_in_dict(guess_word, dict)):
         return INVALID_GUESS
@@ -149,15 +149,16 @@ def pick_word(dict) :
     
     random_word = random.choice(list(dict.keys()))
     try: 
-        random_word = random.choice(list(dict.keys()))
-        assert (len(random_word == 5))
+        while(len(random_word) != SIZE):
+            random_word = random.choice(list(dict.keys()))
+        assert (len(random_word) == 5)
     except:
          print("wrong Length word")
     return random_word
 
 
 def load_words():
-    with open('/Users/michaelhilton/Development/Teaching/in-class-2022/feb-10-Debugging/words.json') as json_file:
+    with open('words.json') as json_file:
         words = json.load(json_file)
     return words
  
