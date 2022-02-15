@@ -22,8 +22,8 @@ def step3():
         name.append(president['Last'])
     return [SOB, name]
 
-list =step3()
-list.sort(1)
+list=step3()
+list.sort()
 print(list)
 
 

@@ -11,7 +11,7 @@ def step3():
 
     ages = []
     for president in presidents :
-        dob = datetime.strptime(president['DOB'], '%Y-%m-%d')
+        dob = datetime.strptime(presidents['DOB'], '%Y-%m-%d')
         today = datetime.today()
         age = today.year - dob.year
         if (today.month, today.day) <  (dob.month, dob.day) :
