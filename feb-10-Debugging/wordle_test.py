@@ -1,5 +1,5 @@
 from wordle import guess_in_dict, unique, hint_repeated_char, positions, \
-    check_guess, valid_guess_length, pick_word
+    check_guess, valid_guess_length, pick_word, process_guess
 
 def test_hint_repeated_char() :
     assert hint_repeated_char([0,1], [0,1], ['_', '_']) == ['*', '*']

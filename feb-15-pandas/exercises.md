@@ -4,6 +4,13 @@
 
 1. Write an expression to find the Per Capita GDP of Serbia in 2007.
 
+```python
+import pandas as pd
+
+dataset = pd.read_csv('data/gapminder_all.csv', index_col='country')
+print(dataset.loc['Serbia'].gdpPercap_2007)
+```
+
 2. Explain what each line in the following short program does: 
 ```python
 first = pd.read_csv('data/gapminder_all.csv', index_col='country')
@@ -12,6 +19,9 @@ third = second.drop('Puerto Rico')
 fourth = third.drop('continent', axis = 1)
 fourth.to_csv('result.csv')
 ```
+
+Writes the all-countries CSV to result.csv, keeping only countries in the Americas (except Puerto Rico) and removing the continent column
+
 3. 
 a) Do the second and third lines below produce the same output? 
 b) Based on this, what rule governs what is included (or not) in numerical slices and named slices in Pandas?
@@ -20,6 +30,8 @@ europe_gdp_data = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='countr
 print(europe_gdp_data.iloc[0:2, 0:2])
 print(europe_gdp_data.loc['Albania':'Belgium', 'gdpPercap_1952':'gdpPercap_1962'])
 ```
+a) no
+b) Named slices include both limits, numerical slices do not include the upper limit
 
 4. Stretch Goal: 
 Write an expression to select each of the following:
