@@ -24,6 +24,7 @@ Writes the all-countries CSV to result.csv, keeping only countries in the Americ
 
 3. 
 a) Do the second and third lines below produce the same output? 
+
 b) Based on this, what rule governs what is included (or not) in numerical slices and named slices in Pandas?
 ```python
 europe_gdp_data = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
