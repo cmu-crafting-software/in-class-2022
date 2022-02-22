@@ -1,6 +1,7 @@
 import json
 import csv
 
+
 from datetime import datetime
 
 def printYears():
@@ -20,7 +21,7 @@ def printCSV():
         next(amendments);
 
         for amendment in amendments :
-            print(datetime.strptime(amendment[2], '%m/%d/%Y').year)
+            print(datetime.strptime(amendment[0], '%m/%d/%Y').year)
 
 def printCSVDict():
     with open('constitutional_amendments.csv', newline='') as csvfile:
@@ -29,7 +30,7 @@ def printCSVDict():
         for amendment in amendments :
             print(datetime.strptime(amendment['Proposed'], '%m/%d/%Y').year)
 
-printYears()
+#printYears()
 
 printCSV()
 
