@@ -148,16 +148,18 @@ def pick_word(dict) :
     #TODO: replace the line below
     
     random_word = random.choice(list(dict.keys()))
-    try: 
-        random_word = random.choice(list(dict.keys()))
-        assert (len(random_word == 5))
+    try:
+        while(len(random_word) != SIZE):
+            random_word = random.choice(list(dict.keys()))
+
+        assert (len(random_word) == SIZE)
     except:
          print("wrong Length word")
     return random_word
 
 
 def load_words():
-    with open('/Users/michaelhilton/Development/Teaching/in-class-2022/feb-10-Debugging/words.json') as json_file:
+    with open('words.json') as json_file:
         words = json.load(json_file)
     return words
  
@@ -173,8 +175,8 @@ def main():
         if lastGuessAnswer == INVALID_GUESS:
             print(check_guess(guess,answerWord))
         else:
-            print("YAY! You won!")
             lastGuessCorrect = True
+            print("YAY! You won!")
 
 
 if __name__ == "__main__":

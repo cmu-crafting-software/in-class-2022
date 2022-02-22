@@ -1,4 +1,4 @@
-from wordle import guess_in_dict, unique, hint_repeated_char, positions, \
+from wordle import guess_in_dict, main, unique, hint_repeated_char, positions, \
     check_guess, valid_guess_length, pick_word
 
 def test_hint_repeated_char() :
@@ -71,3 +71,5 @@ def test_gid_pizz() :
     assert not(guess_in_dict('pizz', {'pizza'}))
 
 #TODO write at least one test for `pick_word`
+def test_main() :
+    assert main()
