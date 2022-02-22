@@ -71,3 +71,6 @@ def test_gid_pizz() :
     assert not(guess_in_dict('pizz', {'pizza'}))
 
 #TODO write at least one test for `pick_word`
+
+def process_guess():
+    assert process_guess('pizza','pizza',{'pizza','piano'})
