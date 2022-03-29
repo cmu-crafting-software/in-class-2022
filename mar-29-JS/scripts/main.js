@@ -20,9 +20,9 @@ const { CORRECT, ALMOST, INCORRECT } = WordEnum;
 
 // HTML elements
 
-const collection = [];
-const messege = [];
-const virtualKeyboard = [];
+const collection = document.querySelectorAll("#collection-row");
+const messege = document.querySelector(".messege");
+const virtualKeyboard = document.querySelector(".virtual-keyboard");
 
 // Global state
 let charArray = ["", "", "", "", ""];
@@ -38,12 +38,33 @@ function checkLetter(letters, word_guess) {
   let arrIndex = 0;
   const arr = [...letters];
   const map = [INCORRECT, INCORRECT, INCORRECT, INCORRECT, INCORRECT];
-  //TODO
+  do {
+    for (let i = 0; i <= 5; i++) {
+      if (guess[arrIndex] === arr[i]) {
+        if (arrIndex === i) {
+          arr[i] = "";
+          map[i] = CORRECT;
+          continue;
+        } else {
+          map[i] = ALMOST;
+          continue;
+        }
+      }
+    }
+    arrIndex++;
+  } while (arrIndex <= 4);
+
   return map;
 }
 
 function matchWord(word, dictionary, word_guess) {
-  //TODO
+  if (word === word_guess) {
+    return MatchResult.GUESSED_WORD;
+  } else if (isWord(word, dictionary)) {
+    return MatchResult.IS_IN_DICTIONARY;
+  } else {
+    return MatchResult.IS_NOT_IN_DICTIONARY;
+  }
 }
 
 function addLetter(data) {
@@ -85,7 +106,10 @@ function renderResult(e) {
         );
         collection[0].children[guessCount].children[i].classList.add("correct");
       }
-      messege.innerHTML = `TODO`;
+      messege.innerHTML = `<p class="bg-black border border-green-600 w-80 rounded text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-lg text-center messeges p-5 shadow">
+                You win <br/>
+                <button  onclick=location.reload() class='bg-white text-green-600 hover:text-green-800 hover:bg-gray-200 py-2 px-2 m-0.5 rounded w-50 cursor-pointer'>Play again</button>
+                </p>`;
 
       guessCount = 7;
       currentCharIdx = 0;
