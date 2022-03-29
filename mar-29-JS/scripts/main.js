@@ -21,13 +21,8 @@ const { CORRECT, ALMOST, INCORRECT } = WordEnum;
 // HTML elements
 
 const collection = document.querySelectorAll("#collection-row");
-<<<<<<< HEAD
 const messege = document.querySelectorAll(".messege");
 const virtualKeyboard = document.querySelectorAll(".virtual-keyboard");
-=======
-const messege = document.querySelector(".messege");
-const virtualKeyboard = document.querySelector(".virtual-keyboard");
->>>>>>> origin/main
 
 // Global state
 let charArray = ["", "", "", "", ""];

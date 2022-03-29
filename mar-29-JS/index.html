@@ -73,17 +73,17 @@
                 <ul class="flex flex-row font-bold text-xs text-center justify-center">
                     <li class="bg-gray-300 py-2 px-2 m-0.5 rounded w-7 cursor-pointer">Q</li>
                     <li class="bg-gray-300 py-2 px-2 m-0.5 rounded w-7 cursor-pointer">W</li>
-                    <li class="bg-gray-300 py-2 px-2 m-0.5 rounded w-7 cursor-pointer">E</li>
+                    <li id="vowel" class="bg-gray-300 py-2 px-2 m-0.5 rounded w-7 cursor-pointer">E</li>
                     <li class="bg-gray-300 py-2 px-2 m-0.5 rounded w-7 cursor-pointer">R</li>
                     <li class="bg-gray-300 py-2 px-2 m-0.5 rounded w-7 cursor-pointer">T</li>
-                    <li class="bg-gray-300 py-2 px-2 m-0.5 rounded w-7 cursor-pointer">Y</li>
-                    <li class="bg-gray-300 py-2 px-2 m-0.5 rounded w-7 cursor-pointer">U</li>
-                    <li class="bg-gray-300 py-2 px-2 m-0.5 rounded w-7 cursor-pointer">I</li>
-                    <li class="bg-gray-300 py-2 px-2 m-0.5 rounded w-7 cursor-pointer">O</li>
+                    <li id="vowel" class="bg-gray-300 py-2 px-2 m-0.5 rounded w-7 cursor-pointer">Y</li>
+                    <li id="vowel" class="bg-gray-300 py-2 px-2 m-0.5 rounded w-7 cursor-pointer">U</li>
+                    <li id="vowel" class="bg-gray-300 py-2 px-2 m-0.5 rounded w-7 cursor-pointer">I</li>
+                    <li id="vowel" class="bg-gray-300 py-2 px-2 m-0.5 rounded w-7 cursor-pointer">O</li>
                     <li class="bg-gray-300 py-2 px-2 m-0.5 rounded w-7 cursor-pointer">P</li>
                 </ul>
                 <ul class="flex flex-row font-bold text-xs text-center justify-center">
-                    <li class="bg-gray-300 py-2 px-2 m-0.5 rounded w-7 cursor-pointer">A</li>
+                    <li id="vowel" class="bg-gray-300 py-2 px-2 m-0.5 rounded w-7 cursor-pointer">A</li>
                     <li class="bg-gray-300 py-2 px-2 m-0.5 rounded w-7 cursor-pointer">S</li>
                     <li class="bg-gray-300 py-2 px-2 m-0.5 rounded w-7 cursor-pointer">D</li>
                     <li class="bg-gray-300 py-2 px-2 m-0.5 rounded w-7 cursor-pointer">F</li>
@@ -112,20 +112,25 @@
 <script src="./scripts/dictionary.js"></script>
 <script src="./scripts/main.js"></script>
 <style>
-<<<<<<< HEAD
-
-<!--for ID, use hash classes use period-->
- #titleText{
-     background-color: aqua;
-
- }
-=======
  
 #titleText{
-    background-color: magenta;
+    background-color: aqua;
 }
->>>>>>> origin/main
-
+.correct{
+    background-color: palegreen;
+}
+.incorrect{
+    background-color: crimson;
+}
+.almostCorrect{
+    background-color: gold;
+}
+#enter{
+    background-color: aqua;
+}
+#vowel{
+    background-color: palevioletred;
+}
 
 </style>
 </html>
