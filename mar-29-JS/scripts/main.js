@@ -20,9 +20,9 @@ const { CORRECT, ALMOST, INCORRECT } = WordEnum;
 
 // HTML elements
 
-const collection = [];
-const messege = [];
-const virtualKeyboard = [];
+const collection = document.querySelectorAll("#collection-row");
+const messege = document.querySelectorAll(".messege");
+const virtualKeyboard = document.querySelectorAll(".virtual-keyboard");
 
 // Global state
 let charArray = ["", "", "", "", ""];
